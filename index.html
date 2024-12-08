@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koło Naukowe - RriDr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" id="Logolink"><img src="images/logo_igw_2_gimp2.png">
+        </a>
+        <hr/>
+        <h1>Koło Naukowe - Renaturyzacja Rzek i Dolin rzecznych</h1>
+    </header>
+        <nav class="topnav">
+            <div class="dropdown">
+                <button class="dropdown-button">Obozy</button>
+                <div class="dropdown-content">
+                    <button class="tab-button" data-tab="section-nida">Nida - Lipiec 2024</button>
+                    <button class="tab-button" data-tab="section-klimkowka">Klimkówka - Wrzesień 2024</button>
+                </div>
+            </div>
+            <button class="tab-button" data-tab="section-sprzet">Sprzęt</button>
+            <button class="tab-button" data-tab="section-o-nas">O nas</button>
+            <button class="tab-button" data-tab="section-contact">Kontakt</button>
+            <!--<a href="javascript:void(0);" class="mobMenuIcon" oneclick="myFunction()" >M</a>-->
+            <!--<button class="mobMenuIcon"></button>-->
+        </nav>
+    <main>
+        <!-- Sekcja Nida -->
+        <section id="section-nida" class="tab-content active">
+            <h2>Nida - Lipiec 2024</h2>
+            <p>Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.</p>
+            <p>Zdjecia z obozu</p>
+            <div id="gallery-nida" class="gallery">
+                <button class="arrow prev">&lt;</button>
+                <img src="images/img1.jpg" alt="Zdjęcie obozu Nida">
+                <button class="arrow next">&gt;</button>
+            </div>
+            <p>Mapa punktów z podkładem ortofotomapy oraz OSM standard</p>
+            <!----------- Dodanie mapy ----------->
+                <iframe id="map-nida"
+                    width="100%" 
+                    height="400"
+                    src="maps/map_1_Nida">
+                </iframe>
+        </section>
+
+        <!-- Sekcja Klimkówka -->
+        <section id="section-klimkowka" class="tab-content">
+            <h2>Klimkówka - Wrzesień 2024</h2>
+            <p>Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.</p>
+            <p>Zdjecia z obozu</p>
+            <div id="gallery-klimkowka" class="gallery">
+                <button class="arrow prev">&lt;</button>
+                <img src="images/klimkowka1.jpg" alt="Zdjęcie obozu Klimkówka">
+                <button class="arrow next">&gt;</button>
+            </div>
+            <p>Mapa punktów z podkładem ortofotomapy oraz OSM standard</p>
+            <!----------- Dodanie mapy ----------->
+                <iframe id="map-klimkowka"
+                    width="100%" 
+                    height="400"
+                    src="maps/map_2_klimkowka">
+                </iframe>
+        </section>
+
+        <!-- Sekcja Sprzęt -->
+        <section id="section-sprzet" class="tab-content">
+            <h2>Sprzęt</h2>
+            <p>Opis sprzętu wykorzystywanego przez koło naukowe.</p>
+        </section>
+
+        <!-- Sekcja O nas -->
+        <section id="section-o-nas" class="tab-content">
+            <h2>O nas</h2>
+            <p>Opis działalności koła naukowego.</p>
+        </section>
+        <!-- Sekcja kontakt -->
+        <section id="section-contact" class="tab-content">
+            <h2>Kontakt</h2>
+            <p>tel: 1234567890</p>
+            <p>mail: @outlook.com</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

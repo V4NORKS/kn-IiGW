@@ -1,0 +1,1 @@
+var json_geopackage_3 = {"type":"FeatureCollection","name":"geopackage_3","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","photo_url":"E:\\Kody\\Strona\\IMG_7924.JPG"},"geometry":{"type":"Point","coordinates":[21.08225020026762,49.552801307294288]}}]}
