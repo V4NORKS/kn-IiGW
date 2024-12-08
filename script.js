@@ -61,7 +61,7 @@ initGallery("gallery-nida", [
     "images/img5.jpg",
     "images/img6.jpg",
     "images/img7.jpg",
-    "images/img8.jpg",
+//    "images/img8.jpg",
 //    "images/img9.jpg",
 //    "images/img10.jpg",
 ]);
@@ -75,6 +75,6 @@ initGallery("gallery-klimkowka", [
     "images/klimkowka6.jpg",
     "images/klimkowka7.jpg",
     "images/klimkowka8.jpg",
-    "images/klimkowka9.jpg",
+//    "images/klimkowka9.jpg",
 //    "images/klimkowka10.jpg",
 ]);
