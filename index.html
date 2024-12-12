@@ -2,36 +2,53 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koło Naukowe - RriDr</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
         <a href="index.html" id="Logolink"><img src="images/logo_igw_2_gimp2.png">
         </a>
-        <hr/>
-        <h1>Koło Naukowe - Renaturyzacja Rzek i Dolin rzecznych</h1>
-    </header>
-        <nav class="topnav">
+        <!--<hr/>
+        <h1>Koło Naukowe - Renaturyzacja Rzek i Dolin rzecznych</h1>-->
+        <nav>
+            <button class="tab-button" data-tab="section-strona_glowna" id="Strona-glowna">Strona główna</button>
             <div class="dropdown">
-                <button class="dropdown-button">Obozy</button>
+                <button class="dropdown-button" id="Obozy">Obozy</button>
                 <div class="dropdown-content">
                     <button class="tab-button" data-tab="section-nida">Nida - Lipiec 2024</button>
                     <button class="tab-button" data-tab="section-klimkowka">Klimkówka - Wrzesień 2024</button>
                 </div>
             </div>
-            <button class="tab-button" data-tab="section-sprzet">Sprzęt</button>
+            <button class="tab-button" data-tab="section-sprzet" id="Sprzet">Sprzęt</button>
             <button class="tab-button" data-tab="section-o-nas">O nas</button>
             <button class="tab-button" data-tab="section-contact">Kontakt</button>
             <!--<a href="javascript:void(0);" class="mobMenuIcon" oneclick="myFunction()" >M</a>-->
             <!--<button class="mobMenuIcon"></button>-->
         </nav>
+    </header>
     <main>
-        <!-- Sekcja Nida -->
-        <section id="section-nida" class="tab-content active">
+        <!---------- Sekcja Strona glowna ------------>
+        <section id="section-strona_glowna" class="tab-content active">
+            <div class="baner">
+                <h1>Koło Naukowe - Renaturyzacja Rzek i Dolin rzecznych</h1>
+            </div>
+            <!--<h2>STRONA GŁÓWNA</h2>
+            <p> STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS STRONA GLOWNA OPIS</p>-->
+        </section>
+        <!---------- Sekcja Nida ---------->
+        <section id="section-nida" class="tab-content">
             <h2>Nida - Lipiec 2024</h2>
-            <p>Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.Opis obozu nad Nidą.</p>
+            <div class="nida-opis">
+                    <p>W ramach działalności Koła Naukowego zorganizowaliśmy trzydniowy obóz badawczy nad rzeką Nidą w miejscowości Umianowice. To niezwykłe miejsce pozwoliło nam na praktyczne zastosowanie naszych umiejętności i wykorzystanie nowoczesnego sprzętu do badań hydrologicznych.</p>
+
+                    <p>Podczas obozu przeprowadziliśmy szczegółowe pomiary rzeki Nidy, w tym wykonaliśmy przekroje poprzeczne koryta rzecznego za pomocą sondy ADCP oraz sprzętu GNSS. Zebrane dane pozwoliły nam na dokładne odwzorowanie profilu rzeki oraz analizę warunków hydrodynamicznych.</p>
+                    
+                    <p>Nasze badania nie tylko wzbogaciły naszą wiedzę, ale również przyczyniły się do lepszego zrozumienia procesów zachodzących w rzece i jej dolinie. Obozy takie jak ten są doskonałą okazją do zdobywania praktycznego doświadczenia oraz integracji zespołu. Rzeka Nida jeszcze bardziej utwierdziła nas w przekonaniu, jak ważne jest dbanie o naturalne ekosystemy rzeczne.</p>
+            </div>
             <p>Zdjecia z obozu</p>
             <div id="gallery-nida" class="gallery">
                 <button class="arrow prev">&lt;</button>
@@ -40,8 +57,8 @@
             </div>
             <p>Mapa punktów z podkładem ortofotomapy oraz OSM standard</p>
             <!----------- Dodanie mapy ----------->
-                <iframe id="map-nida"
-                    width="100%" 
+                <iframe id="maps"
+                    width="80%" 
                     height="400"
                     src="maps/map_1_Nida">
                 </iframe>
@@ -59,25 +76,36 @@
             </div>
             <p>Mapa punktów z podkładem ortofotomapy oraz OSM standard</p>
             <!----------- Dodanie mapy ----------->
-                <iframe id="map-klimkowka"
-                    width="100%" 
+                <iframe id="maps"
+                    width="80%" 
                     height="400"
                     src="maps/map_2_klimkowka">
                 </iframe>
         </section>
 
-        <!-- Sekcja Sprzęt -->
+        <!---------- Sekcja Sprzęt ---------->
         <section id="section-sprzet" class="tab-content">
             <h2>Sprzęt</h2>
-            <p>Opis sprzętu wykorzystywanego przez koło naukowe.</p>
+            <div class="sprzet-opis">W ramach działalności naszego Koła Naukowego korzystamy z zaawansowanego sprzętu, który umożliwia nam prowadzenie profesjonalnych badań i analiz środowiskowych:
+                <p><i class="fas fa-circle fa-my-class"></i>Sonda ADCP (Acoustic Doppler Current Profiler) – nowoczesne urządzenie do pomiaru napełnienia i prędkości przepływu wody w rzekach i ciekach wodnych. Umożliwia dokładne odwzorowanie warunków hydrologicznych.</p>
+                <p><i class="fas fa-circle fa-my-class"></i>Dron DJI z technologią RTK (Real-Time Kinematic) – wysokiej precyzji narzędzie do tworzenia aktualnych ortofotomap. Dzięki niemu możemy rejestrować zmiany w krajobrazie i monitorować stan dolin rzecznych z powietrza.</p>
+                <p><i class="fas fa-circle fa-my-class"></i>Sprzęt GNSS (Global Navigation Satellite System) – urządzenia do precyzyjnego pomiaru współrzędnych geograficznych. Wykorzystujemy je w pracach terenowych, aby zapewnić dokładność zebranych danych.</p> 
+                <p>Dzięki tym narzędziom jesteśmy w stanie przeprowadzać kompleksowe analizy renaturyzacyjne.</p> 
+            </div>
         </section>
 
-        <!-- Sekcja O nas -->
+        <!---------- Sekcja O nas ---------->
         <section id="section-o-nas" class="tab-content">
             <h2>O nas</h2>
-            <p>Opis działalności koła naukowego.</p>
+            <div class="onas-opis">
+                Koło Naukowe Renaturyzacji Rzek i Dolin Rzecznych skupia studentów z pasją do ochrony środowiska i odtwarzania naturalnych ekosystemów wodnych. Naszą misją jest pogłębianie wiedzy na temat rzek i dolin rzecznych oraz wdrażanie innowacyjnych rozwiązań w ich renaturyzacji.
+
+                <p>Działamy wspólnie, łącząc naukę z praktyką. Organizujemy badania terenowe, warsztaty i konferencje, które pozwalają nam zdobywać nowe umiejętności i dzielić się wynikami naszych prac. Każdy z naszych członków wnosi unikalne spojrzenie na kwestie związane z ochroną przyrody, co czyni naszą działalność różnorodną i inspirującą.</p>
+                
+                <p>Dołącz do nas i razem przywróćmy rzekom ich naturalne piękno!</p>
+            </div>
         </section>
-        <!-- Sekcja kontakt -->
+        <!---------- Sekcja kontakt ---------->
         <section id="section-contact" class="tab-content">
             <h2>Kontakt</h2>
             <p>tel: 1234567890</p>
@@ -85,6 +113,26 @@
         </section>
     </main>
 
+    <!---------- Footer ---------->
+    <footer>
+        <div class="menu">
+            <a href="index.html">Strona Główna</a><i class="fas fa-circle fa-my-class"></i>
+            <a href="index.html">O nas</a><i class="fas fa-circle fa-my-class"></i>
+            <a href="index.html">Usługi</a><i class="fas fa-circle fa-my-class"></i>
+            <a href="index.html">Kontakt</a>
+        </div>
+        <div class="social">
+            <a href="#"> <i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Koło Naukowe. Wszystkie prawa zastrzeżone <a href="">Privacy policy</a> 
+        </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,15 +1,25 @@
-/* Styl ogólny */
+/* ----------Styl ogólny---------- */
+:root {
+    --primary-color: #585c68;
+}
+.fa-my-class{
+    font-size:0.3rem;
+    position: relative;
+    bottom: 0.2rem;
+    padding:0 0.2rem;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f4f4f9;
+    background-color: #d1d1d1;
 }
 
 header {
-    background-color: #585c68;
+    background-color:var(--primary-color);
     color: white;
+    margin: 15px;
     padding: 10px 0;
 }
 
@@ -17,18 +27,20 @@ header h1 {
     margin: 0;
 }
 
-header > hr{
+/*header > hr{
     width: 80%;
+}*/
+
+/* --------- Logo ---------*/
+#Logolink{
+    display: block;
+    text-align: center;
+    
 }
 
 /* --------- Menu nawigacyjne główne ---------*/
 
-.topnav {
-    margin: 15px 0;
-
-}
-
-.tab-button {
+nav .tab-button {
     padding: 10px 20px;
     margin: 0 5px;
     cursor: pointer;
@@ -50,6 +62,38 @@ header > hr{
 
 .tab-content.active {
     display: block;
+}
+
+
+/*
+nav .hamburger {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}*/
+
+/* --------- Baner ---------- */
+.baner{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url(images/baner.jpg) no-repeat;
+    background-size: cover;
+    min-height:600px;
+    display: flex;
+    align-items: center;
+}
+.baner .container{
+    padding: 1rem;
+}
+.baner h1{
+    color:white;
+    font-size: 4rem;
+    font-weight: 800;
+}
+.baner h3{
+    color:white;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
 /* --------- Dropdown menu - OBOZY --------- */
@@ -96,19 +140,12 @@ header > hr{
     background-color: #f4f4f4;
 }
 
-/* Wyświetlanie menu po najechaniu */
+/* ----------Wyświetlanie menu po najechaniu---------- */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* --------- Logo ---------*/
-#Logolink{
-    display: block;
-    text-align: center;
-    
-}
-
-/* Styl galerii */
+/* ----------Styl galerii---------- */
 .gallery {
     position: relative;
     max-width: 600px;
@@ -124,12 +161,12 @@ header > hr{
     display: block;
 }
 
-/* Strzałki do zmiany zdjęć */
+/* ----------Strzałki do zmiany zdjęć---------- */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #0081ea;
+    background-color: #585c6896;
     color: white;
     border: none;
     padding: 10px;
@@ -147,12 +184,55 @@ header > hr{
 }
 
 .arrow:hover {
-    background-color: #005bb5;
+    background-color: #585c68;
 }
 
 /* Efekty przejścia zdjęć */
 .fade-in {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+/* --------- Sekcja - Nida ---------- */ 
+.nida-opis {
+    text-align: justify;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+/* --------- Sekcja - Sprzet ---------- */ 
+.sprzet-opis {
+    text-align: justify;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+/* --------- Sekcja - O nas ---------- */ 
+.onas-opis {
+    text-align: justify;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/* --------- Footer ---------- */
+footer{
+    background:var(--primary-color);
+    padding:2rem 0;
+    color:white;
+    text-align: center;
+}
+footer .menu a{
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:0 0.4rem;
+}
+footer .social{
+    margin: 1.5rem 0;
+}
+footer .social a{
+    color:#ccc;
+    letter-spacing: 1rem;
+}
+footer .copyright a{
+    color:var(--kolorGlowny);
+    text-decoration: none;
 }
 
 @keyframes fadeIn {
@@ -163,3 +243,24 @@ header > hr{
         opacity: 1;
     }
 }
+
+/*@media screen and (max-width: 768px) {
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    nav .menu.open {
+        display: flex;
+    }
+}*/

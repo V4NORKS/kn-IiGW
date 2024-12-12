@@ -52,6 +52,7 @@ function initGallery(galleryId, images) {
     }, 120000); // 120000 ms = 120 sekund
 }
 
+
 // Inicjalizacja galerii dla poszczególnych sekcji
 initGallery("gallery-nida", [
     "images/img1.jpg",
@@ -60,7 +61,7 @@ initGallery("gallery-nida", [
     "images/img4.jpg",
     "images/img5.jpg",
     "images/img6.jpg",
-    "images/img7.jpg",
+//    "images/img7.jpg",
 //    "images/img8.jpg",
 //    "images/img9.jpg",
 //    "images/img10.jpg",
