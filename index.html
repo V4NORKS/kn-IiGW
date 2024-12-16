@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl"
+scroll-behavior: smooth;>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <header>
+    
+    <header id="dynamic-header" class="initial-header">
         <a href="index.html" id="Logolink"><img src="images/logo_igw_2_gimp2.png">
         </a>
         <hr/>
-        <!--<h1>Koło Naukowe - Renaturyzacja Rzek i Dolin rzecznych</h1>-->
-        <nav>
+        <nav class="menu-header">
             <button class="tab-button" data-tab="section-strona_glowna" id="Strona-glowna">Strona główna</button>
             <div class="dropdown">
                 <button class="dropdown-button" id="Obozy">Obozy</button>
@@ -67,11 +68,19 @@
         <!-- Sekcja Klimkówka -->
         <section id="section-klimkowka" class="tab-content">
             <h2>Klimkówka - Wrzesień 2024</h2>
-            <p>Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.Opis obozu nad Klimkówką.</p>
+            <div class="klimkowka-opis">
+                <p>Obóz badawczy nad jeziorem Klimkowskim był dla naszego Koła Naukowego wyjątkową okazją do zgłębiania wiedzy o funkcjonowaniu zbiorników wodnych i infrastrukturze hydrotechnicznej. W trakcie trzydniowego wyjazdu realizowaliśmy zaawansowane pomiary oraz mieliśmy okazję zwiedzić zaporę Klimkowską.</p>
+
+                    <p>Podczas obozu wykonaliśmy przekroje zbiornika wodnego, podobnie jak podczas wcześniejszych badań rzek, z wykorzystaniem sondy ADCP. Umożliwiło nam to dokładne pomiary głębokości i profilowanie dna zbiornika. Za pomocą sprzętu GNSS określiliśmy również położenie zwierciadła wody, co pozwoliło na pełniejszą analizę hydrologiczną akwenu.</p>
+                    
+                    <p>Dodatkowym, niezapomnianym elementem obozu była wizyta na zaporze, gdzie mogliśmy zobaczyć z bliska wszystkie jej kluczowe elementy i zrozumieć, jak funkcjonuje taka konstrukcja. Ta część programu pozwoliła nam lepiej zrozumieć rolę zapór w zarządzaniu wodą i ochronie przed powodziami.</p>
+                    
+                    <p>Obóz nad jeziorem Klimkowskim był nie tylko źródłem cennych danych, ale także inspirującym doświadczeniem, które pogłębiło nasze zaangażowanie w tematykę renaturyzacji i ochrony wód.</p>
+            </div>
             <p>Zdjecia z obozu</p>
             <div id="gallery-klimkowka" class="gallery">
                 <button class="arrow prev">&lt;</button>
-                <img src="images/klimkowka1.jpg" alt="Zdjęcie obozu Klimkówka">
+                <img src="images/klim1.jpg" alt="Zdjęcie obozu Klimkówka">
                 <button class="arrow next">&gt;</button>
             </div>
             <p>Mapa punktów z podkładem ortofotomapy oraz OSM standard</p>
@@ -108,18 +117,18 @@
         <!---------- Sekcja kontakt ---------->
         <section id="section-contact" class="tab-content">
             <h2>Kontakt</h2>
-            <p>tel: 1234567890</p>
-            <p>mail: @outlook.com</p>
+            <p>tel: 213721372137</p>
+            <p>mail: 213721372137@outlook.com</p>
         </section>
     </main>
 
     <!---------- Footer ---------->
     <footer>
         <div class="menu">
-            <a href="index.html">Strona Główna</a><i class="fas fa-circle fa-my-class"></i>
-            <a href="index.html">O nas</a><i class="fas fa-circle fa-my-class"></i>
-            <a href="index.html">Usługi</a><i class="fas fa-circle fa-my-class"></i>
-            <a href="index.html">Kontakt</a>
+            <a href="#section-strona_glowna" class="footer-link">Strona Główna</a><i class="fas fa-circle fa-my-class"></i>
+            <a href="#section-o-nas" class="footer-link">O nas</a><i class="fas fa-circle fa-my-class"></i>
+            <a href="#section-sprzet" class="footer-link">Sprzęt</a><i class="fas fa-circle fa-my-class"></i>
+            <a href="#section-contact" class="footer-link">Kontakt</a>
         </div>
         <div class="social">
             <a href="#"> <i class="fab fa-facebook-square"></i></a>

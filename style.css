@@ -16,20 +16,50 @@ body {
     background-color: #d1d1d1;
 }
 
-header {
-    background-color:var(--primary-color);
-    color: white;
-    margin: 15px;
-    padding: 10px 0;
-}
-
-header h1 {
-    margin: 0;
-}
-
-header > hr{
+/* --------- Header-ns - Początkowy styl nagłówka --------- */
+header > hr
+{
     width: 80%;
 }
+#dynamic-header {
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    padding: 20px 0;
+    width: 100%;   
+}
+/* --------- Header-s styl nagłówka skrolowany --------- */
+#dynamic-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 12px 0;
+}
+
+nav .menu-header {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*
+nav ul.menu li {
+    margin: 0 15px;
+}
+
+nav ul.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul.menu li a:hover {
+    color: #f0a500;
+}
+*/
 
 /* --------- Logo ---------*/
 #Logolink{
@@ -187,12 +217,18 @@ nav .hamburger {
     background-color: #585c68;
 }
 
-/* Efekty przejścia zdjęć */
+/* --------- Efekty przejścia zdjęć --------- */
 .fade-in {
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.0s ease-in-out;
 }
 /* --------- Sekcja - Nida ---------- */ 
 .nida-opis {
+    text-align: justify;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+/* --------- Sekcja - Klimkowka ---------- */ 
+.klimkowka-opis {
     text-align: justify;
     margin-left: 80px;
     margin-right: 80px;

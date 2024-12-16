@@ -11,6 +11,16 @@ document.querySelectorAll(".tab-button").forEach(button => {
     });
 });
 
+window.addEventListener("scroll", () => {
+    const header = document.getElementById("dynamic-header");
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+
 // OPIS: Funkcja do zmiany zdjęcia z efektem przejścia.
 function updateImageWithEffect(imageElement, newSrc) {
     imageElement.classList.add("fade-in"); // Dodaj efekt
@@ -45,12 +55,25 @@ function initGallery(galleryId, images) {
         updateImage();
     });
 
-    // Automatyczna zmiana zdjęcia co 120 sekund
+    // Automatyczna zmiana zdjęcia co 10 sekund
     setInterval(() => {
         currentIndex = (currentIndex + 1) % images.length;
         updateImage();
-    }, 120000); // 120000 ms = 120 sekund
+    }, 10000); // 10000 ms = 10 sekund
 }
+
+document.querySelectorAll(".footer-link").forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault(); // Zapobiega domyślnemu przewijaniu
+        const targetId = link.getAttribute("href").substring(1); // Pobierz ID sekcji
+        document.querySelectorAll(".tab-content").forEach(tab => tab.classList.remove("active"));
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.classList.add("active");
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
 
 
 // Inicjalizacja galerii dla poszczególnych sekcji
@@ -68,14 +91,14 @@ initGallery("gallery-nida", [
 ]);
 
 initGallery("gallery-klimkowka", [
-    "images/klimkowka1.jpg",
-    "images/klimkowka2.jpg",
-    "images/klimkowka3.jpg",
-    "images/klimkowka4.jpg",
-    "images/klimkowka5.jpg",
-    "images/klimkowka6.jpg",
-    "images/klimkowka7.jpg",
-    "images/klimkowka8.jpg",
-//    "images/klimkowka9.jpg",
-//    "images/klimkowka10.jpg",
+    "images/klim1.jpg",
+    "images/klim2.jpg",
+    "images/klim3.jpg",
+    "images/klim4.jpg",
+    "images/klim5.jpg",
+    "images/klim6.jpg",
+    "images/klim7.jpg",
+    "images/klim8.jpg",
+//    "images/klim9.jpg",
+//    "images/klim10.jpg",
 ]);
